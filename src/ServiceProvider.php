@@ -26,7 +26,7 @@ class ServiceProvider extends IlluminateServiceProvider {
         $this->mergeConfigFrom($configPath, 'dompdf');
 
         $this->app->bind('dompdf', function ($app) {
-            $dompdf = new \DOMPDF();
+            $dompdf = new DOMPDF();
             $dompdf->set_base_path(realpath($app['path.public']));
             return $dompdf;
         });
