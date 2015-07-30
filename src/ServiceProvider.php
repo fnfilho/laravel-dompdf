@@ -55,7 +55,7 @@ class ServiceProvider extends IlluminateServiceProvider {
 
         $config_file = $this->app['config']->get(
             'dompdf.config_file'
-        ) ?: $this->app['path.base'] . '/vendor/dompdf/dompdf/dompdf_config.inc.php';
+        ) ?: $this->app['path.base'] . '/vendor/barryvdh/laravel-dompdf/config/dompdf_config.inc.php';
 
         if (file_exists($config_file)) {
             require_once $config_file;
