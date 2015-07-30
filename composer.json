@@ -9,12 +9,17 @@
             "email": "barryvdh@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/fnfilho/dompdf"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "5.0.x|5.1.x",
-        "dompdf/dompdf": "0.8.0"
+        "dompdf/dompdf": "0.8.*"
     },
-
     "autoload": {
         "psr-4": {
             "Barryvdh\\DomPDF\\": "src"
