@@ -1,6 +1,7 @@
 <?php
 namespace Barryvdh\DomPDF;
 
+use Dompdf\Dompdf as DOMPDF;
 use Exception;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
@@ -41,7 +42,7 @@ class ServiceProvider extends IlluminateServiceProvider {
     {
         $configPath = __DIR__ . '/../config/dompdf.php';
         $this->publishes([$configPath => config_path('dompdf.php')], 'config');
-        
+
         $defines = $this->app['config']->get('dompdf.defines') ?: array();
         foreach ($defines as $key => $value) {
             $this->define($key, $value);
@@ -75,10 +76,10 @@ class ServiceProvider extends IlluminateServiceProvider {
     {
         return array('dompdf', 'dompdf.wrapper');
     }
-   
+
     /**
      * Define a value, if not already defined
-     * 
+     *
      * @param string $name
      * @param string $value
      */

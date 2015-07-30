@@ -1,7 +1,7 @@
 <?php
 namespace Barryvdh\DomPDF;
 
-use DOMPDF;
+use Dompdf\Dompdf as DOMPDF;
 use Exception;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Factory as ViewFactory;
